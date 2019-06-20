@@ -11,4 +11,8 @@ jobs:
     - stage: build
       script: npm build
 on:
-  branch: master
+  branch:  master
+deploy:
+  provider: heroku
+  api_key: $HEROKU_KEY
+  app: $HEROKU_APP
